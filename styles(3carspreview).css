@@ -1,0 +1,157 @@
+@import url(https://fonts.google.com/specimen/Lexend+Deca);
+@import url(https://fonts.google.com/specimen/Big+Shoulders+Display);
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url(LexendDeca-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Big Shoulders Display";
+  src: url(BigShouldersDisplay-VariableFont_wght.ttf);
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+:root {
+  --car__title_color: hsl(0, 0%, 95%);
+  --car__description_color: hsla(0, 0%, 100%, 0.75);
+  --sedan_color: hsl(31, 77%, 52%);
+  --suvs_color: hsl(184, 100%, 22%);
+  --luxury_color: hsl(179, 100%, 13%);
+  --background_color: rgba(199, 199, 199, 0.151);
+  --button_color: hsl(0, 0%, 95%);
+}
+
+.container {
+  background: var(--background_color);
+  width: 1440px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.car {
+  width: 20%;
+  height: 60%;
+}
+
+.car__image {
+  margin: 40px 100px 0 40px;
+}
+
+.car__title {
+  padding-left: 40px;
+  padding-top: 0;
+  font-family: "Big Shoulders Display";
+  font-weight: 700;
+  font-size: 32px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: var(--car__title_color);
+}
+
+.car__description {
+  margin: 0 40px 20px 40px;
+  color: var(--car__description_color);
+  line-height: 1.5;
+  font-family: "Lexend Deca";
+  font-weight: 350;
+  font-size: 15px;
+}
+
+.sedan {
+  background: var(--sedan_color);
+  border-radius: 10px 0 0 10px;
+}
+
+.suvs {
+  background: var(--suvs_color);
+}
+
+.luxury {
+  background: var(--luxury_color);
+  border-radius: 0 10px 10px 0;
+}
+
+.car__button {
+  appearance: none;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0);
+  border: solid 2px;
+  border-color: var(--button_color);
+  color: var(--button_color);
+  font-family: "Lexend Deca";
+  font-size: 15px;
+  margin: 60px 100px 40px 40px;
+  padding: 10px 25px;
+}
+
+.car__button:hover {
+  background-color: var(--button_color);
+  cursor: pointer;
+}
+
+.sedan > .car__button:hover {
+  color: hsl(31, 77%, 52%);
+}
+
+.suvs > .car__button:hover {
+  color: hsl(184, 100%, 22%);
+}
+
+.luxury > .car__button:hover {
+  color: hsl(179, 100%, 13%);
+}
+
+.attribution {
+  width: 1440px;
+  text-align: center;
+  display: inline-block;
+}
+
+hr {
+  size: 3px;
+  color:black;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 375px;
+    height: 1300px;
+    display: inline-block;
+    background: none;
+  }
+
+  .car {
+    width: 375px;
+    height: 400px;
+    border-radius: 0;
+    display: inline-block;
+  }
+
+  .car__description {
+    margin: 0 40px 0 40px;
+    color: var(--car__description_color);
+    line-height: 1.5;
+    font-family: "Lexend Deca";
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .car__button {
+    font-size: 16px;
+    margin: 40px 100px 40px 40px;
+  }
+
+  .attribution {
+    width: 375px;
+    text-align: center;
+    display: block;
+  }
+}
